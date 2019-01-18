@@ -5,10 +5,7 @@ import Movie from "../../components/Movie/Movie";
 class Watchlist extends Component {
     state= {
         addingMovieName: '',
-        movies: [
-            {id: '2019-01-18T10:08:36.933Z', name: 'Game of Thrones'},
-            {id: '2019-01-18T10:08:36.939Z', name: 'Aquamen'}
-        ]
+        movies: []
     };
 
     inputMovie = (event) => {
@@ -54,6 +51,19 @@ class Watchlist extends Component {
 
         this.setState({movies});
     };
+
+    componentDidMount() {
+        const savedWatchList = localStorage.getItem('watchList');
+
+        if (savedWatchList) {
+            const movies = JSON.parse(savedWatchList);
+            this.setState({movies});
+        }
+    }
+
+    componentDidUpdate() {
+        localStorage.setItem('watchList', JSON.stringify(this.state.movies));
+    }
 
     render() {
         return (
