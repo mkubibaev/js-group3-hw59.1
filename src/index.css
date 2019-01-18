@@ -1,14 +1,70 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.container p {
+    margin: 30px 0 20px;
+}
+.add-movie-form, .movie {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+.add-movie-form input, .movie input {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 2px;
+    outline: none;
+    font-size: 16px;
+}
+.add-movie-form input[type="text"],
+.movie input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: 1px solid rgba(0,0,0,.12);
+}
+.add-movie-form input[type="button"],
+.movie input[type="button"] {
+    flex-basis: 100px;
+    color: #fff;
+    background: #42a5f5;
+}
+
+.movie input[type="button"] {
+    background: #e57373;
+}
+
+.btn {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.btn:active {
+    box-shadow: none;
 }
