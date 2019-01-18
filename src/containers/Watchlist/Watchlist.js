@@ -6,9 +6,8 @@ class Watchlist extends Component {
     state= {
         addingMovieName: '',
         movies: [
-            {id: '2018-12-19T12:39:06.260Z', name: 'Buy milk'},
-            {id: '2018-12-19T12:39:27.549Z', name: 'Do homework'},
-            {id: '2018-12-19T18:41:58.355Z', name: 'Kill Bill'}
+            {id: '2019-01-18T10:08:36.933Z', name: 'Game of Thrones'},
+            {id: '2019-01-18T10:08:36.939Z', name: 'Aquamen'}
         ]
     };
 
